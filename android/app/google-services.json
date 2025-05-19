@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1029906964489",
+    "project_id": "rim-stor",
+    "storage_bucket": "rim-stor.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1029906964489:android:084a6a6cf2af944b3798d8",
+        "android_client_info": {
+          "package_name": "com.example.rim_stor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDq_VcKvsi0YwT9acjulogvLXa-T-UskRU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

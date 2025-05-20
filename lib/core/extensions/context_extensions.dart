@@ -12,6 +12,8 @@ extension ContextExtensions on BuildContext {
     return AppLocalizations.of(this)!.translate(langKey).toString();
   }
 
+  // style
+  TextStyle get textStyle => Theme.of(this).textTheme.displaySmall!;
   // images
   MyAssets get assets => Theme.of(this).extension<MyAssets>()!;
   //navigation

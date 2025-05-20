@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:rim_stor/core/language/app_localizations.dart';
 import 'package:rim_stor/core/style/theme/colors_extensions.dart';
 
 extension ContextExtensions on BuildContext {
   // colors
   MyColors get color => Theme.of(this).extension<MyColors>()!;
+
+  // lang
+  String translate(String langKey) {
+    return AppLocalizations.of(this)!.translate(langKey).toString();
+  }
+
   //navigation
   Future<dynamic> pushNamed(String routeName, {Object? arguments}) {
     return Navigator.of(this).pushNamed(routeName, arguments: arguments);

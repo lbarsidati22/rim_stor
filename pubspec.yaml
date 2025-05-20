@@ -41,6 +41,8 @@ dependencies:
   flutter_dotenv: ^5.2.1
   flutter_screenutil: ^5.9.3
   flutter_launcher_icons: ^0.14.3
+  flutter_localizations:
+    sdk: flutter
 
 dev_dependencies:
   flutter_test:
@@ -69,8 +71,11 @@ flutter:
     - assets/images/core/
     - .env.dev
     - .env.prod
+    - lang/ar.json
+    - lang/en.json
 
   # example:
+  
   fonts:
   # Arabic font
     - family: Cairo

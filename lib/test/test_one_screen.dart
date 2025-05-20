@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rim_stor/core/extensions/context_extensions.dart';
+import 'package:rim_stor/core/language/lang_keys.dart';
 import 'package:rim_stor/core/routes/app_routes.dart';
 
 class TestOneScreen extends StatelessWidget {
@@ -14,6 +15,7 @@ class TestOneScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('Test One Screen'),
+            Text(context.translate(LangKeys.appName)),
             TextButton(
               onPressed: () {
                 context.pushNamed(AppRoutes.testTwo);

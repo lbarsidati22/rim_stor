@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rim_stor/core/language/app_localizations.dart';
+import 'package:rim_stor/core/style/theme/assets_extension.dart';
 import 'package:rim_stor/core/style/theme/colors_extensions.dart';
 
 extension ContextExtensions on BuildContext {
@@ -11,6 +12,8 @@ extension ContextExtensions on BuildContext {
     return AppLocalizations.of(this)!.translate(langKey).toString();
   }
 
+  // images
+  MyAssets get assets => Theme.of(this).extension<MyAssets>()!;
   //navigation
   Future<dynamic> pushNamed(String routeName, {Object? arguments}) {
     return Navigator.of(this).pushNamed(routeName, arguments: arguments);

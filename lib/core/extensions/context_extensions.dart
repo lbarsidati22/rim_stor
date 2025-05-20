@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:rim_stor/core/style/theme/colors_extensions.dart';
 
 extension ContextExtensions on BuildContext {
+  // colors
+  MyColors get color => Theme.of(this).extension<MyColors>()!;
+  //navigation
   Future<dynamic> pushNamed(String routeName, {Object? arguments}) {
     return Navigator.of(this).pushNamed(routeName, arguments: arguments);
   }

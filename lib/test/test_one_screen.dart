@@ -8,6 +8,7 @@ class TestOneScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.teal,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -17,7 +18,13 @@ class TestOneScreen extends StatelessWidget {
               onPressed: () {
                 context.pushNamed(AppRoutes.testTwo);
               },
-              child: Text('go to test 2'),
+              child: Text(
+                'go to test 2',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: context.color.mainColor,
+                ),
+              ),
             ),
           ],
         ),

@@ -2,7 +2,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rim_stor/core/app/env.variables.dart';
-import 'package:rim_stor/core/common/screens/no_network_screen.dart';
 import 'package:rim_stor/rim_stor_app.dart';
 
 void main() async {

@@ -10,9 +10,12 @@ import 'package:rim_stor/features/auth/presinrasion/widgets/auth_title_info.dart
 import 'package:rim_stor/features/auth/presinrasion/widgets/dark_and_bottom.dart';
 import 'package:rim_stor/features/auth/presinrasion/widgets/login/login_button.dart';
 import 'package:rim_stor/features/auth/presinrasion/widgets/login/login_text_form.dart';
+import 'package:rim_stor/features/auth/presinrasion/widgets/sign_up/sign_up_button.dart';
+import 'package:rim_stor/features/auth/presinrasion/widgets/sign_up/sign_up_text_form.dart';
+import 'package:rim_stor/features/auth/presinrasion/widgets/sign_up/user_avater_image.dart';
 
-class LoginBody extends StatelessWidget {
-  const LoginBody({super.key});
+class SignUpBody extends StatelessWidget {
+  const SignUpBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,37 +26,40 @@ class LoginBody extends StatelessWidget {
           children: [
             DarkAndBottom(),
             SizedBox(
-              height: 50.h,
+              height: 30.h,
             ),
-            //welcome
+            //signUp welcome
             AuthTitleInfo(
-              title: context.translate(LangKeys.login),
+              title: context.translate(LangKeys.signUp),
               descreption: context.translate(
-                LangKeys.welcome,
+                LangKeys.signUpWelcome,
               ),
             ),
             SizedBox(
-              height: 30.h,
+              height: 20.h,
             ),
-            //login with email and password
-            LoginTextForm(),
+            //user avater
+            UserAvaterImage(),
             SizedBox(
-              height: 30.h,
+              height: 20.h,
             ),
-            //login botton
-            LoginButton(),
+            //signUp with email and password
+            SignUpTextForm(),
             SizedBox(
-              height: 30.h,
+              height: 20.h,
             ),
-            //Go to SignUp
+            //signUp botton
+            SignUpButton(),
+
+            //Go to login
             CustomFadeInUp(
               duration: 400,
               child: TextButton(
                 onPressed: () {
-                  context.pushReplacementNamed(AppRoutes.signUp);
+                  context.pushReplacementNamed(AppRoutes.login);
                 },
                 child: TextApp(
-                  text: context.translate(LangKeys.createAccount),
+                  text: context.translate(LangKeys.youHaveAccount),
                   theme: context.textStyle.copyWith(
                     fontSize: 16.sp,
                     fontWeight: FontWeightHelper.bold,

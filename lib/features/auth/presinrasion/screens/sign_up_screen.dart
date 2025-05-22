@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:rim_stor/core/extensions/context_extensions.dart';
+import 'package:rim_stor/features/auth/presinrasion/refactors/auth_custom_painter.dart';
+import 'package:rim_stor/features/auth/presinrasion/refactors/sign_up_body.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -6,11 +10,25 @@ class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Login'),
+      bottomNavigationBar: CustomPaint(
+        size: Size(
+          MediaQuery.sizeOf(context).width,
+          150.h,
+        ),
+        painter: AuthCustomPainter(
+          gradient: LinearGradient(
+            colors: [
+              context.color.bluePinkDark!,
+              context.color.bluePinkDark!,
+              context.color.bluePinkDark!,
+              context.color.bluePinkLight!,
+            ],
+          ),
+        ),
       ),
-      body: Center(
-        child: Text('Login Page'),
+      body: SafeArea(
+        bottom: false,
+        child: SignUpBody(),
       ),
     );
   }

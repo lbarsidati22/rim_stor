@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rim_stor/core/app/connectivity_controller.dart';
 import 'package:rim_stor/core/common/screens/no_network_screen.dart';
-import 'package:rim_stor/core/language/app_localizations_delegate.dart';
 import 'package:rim_stor/core/language/app_localizations_setup.dart';
 import 'package:rim_stor/core/routes/app_routes.dart';
 import 'package:rim_stor/core/style/theme/app_theme.dart';
@@ -22,7 +21,7 @@ class RimStorApp extends StatelessWidget {
             child: MaterialApp(
               debugShowCheckedModeBanner: false,
               title: 'Rim Stor',
-              theme: themeLight(),
+              theme: themeDark(),
               locale: Locale('en'),
               localeResolutionCallback:
                   AppLocalizationsSetup.localeResolutionCallback,
@@ -42,7 +41,7 @@ class RimStorApp extends StatelessWidget {
                   ),
                 );
               },
-              initialRoute: AppRoutes.testOne,
+              initialRoute: AppRoutes.login,
               onGenerateRoute: AppRoutes.onGenerateRoute,
             ),
           );

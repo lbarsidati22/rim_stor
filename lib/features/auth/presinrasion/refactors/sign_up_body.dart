@@ -8,8 +8,6 @@ import 'package:rim_stor/core/routes/app_routes.dart';
 import 'package:rim_stor/core/style/fonts/font_weight_helper.dart';
 import 'package:rim_stor/features/auth/presinrasion/widgets/auth_title_info.dart';
 import 'package:rim_stor/features/auth/presinrasion/widgets/dark_and_bottom.dart';
-import 'package:rim_stor/features/auth/presinrasion/widgets/login/login_button.dart';
-import 'package:rim_stor/features/auth/presinrasion/widgets/login/login_text_form.dart';
 import 'package:rim_stor/features/auth/presinrasion/widgets/sign_up/sign_up_button.dart';
 import 'package:rim_stor/features/auth/presinrasion/widgets/sign_up/sign_up_text_form.dart';
 import 'package:rim_stor/features/auth/presinrasion/widgets/sign_up/user_avater_image.dart';

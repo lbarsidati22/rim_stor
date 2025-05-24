@@ -39,6 +39,7 @@ dependencies:
   # bloc "state manegments"
   bloc: ^9.0.0
   flutter_bloc: ^9.1.1
+  get_it: ^8.0.3
 
   # freezed
   freezed: ^3.0.6

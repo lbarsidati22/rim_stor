@@ -4,6 +4,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rim_stor/core/app/bloc_observer.dart';
 import 'package:rim_stor/core/app/env.variables.dart';
+import 'package:rim_stor/core/di/injector_contenier.dart';
+import 'package:rim_stor/core/services/shared_pref/shared_pref.dart';
 import 'package:rim_stor/rim_stor_app.dart';
 
 void main() async {
@@ -11,6 +13,8 @@ void main() async {
   Bloc.observer = AppBlocObserver();
   await Firebase.initializeApp();
   await EnvVariable.instance.init(envType: EnvTypeEnum.dev);
+  await SharedPref().instantiatePreferences();
+  await setupInjector();
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,

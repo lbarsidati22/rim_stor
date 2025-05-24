@@ -9,7 +9,7 @@ class UserAvaterImage extends StatelessWidget {
     return CustomFadeInDown(
       duration: 500,
       child: CircleAvatar(
-        radius: 38,
+        radius: 50,
         backgroundImage: NetworkImage(
             'https://cdn-icons-png.flaticon.com/512/149/149071.png'),
       ),
